@@ -22,4 +22,10 @@ Build an AI assistant that helps new employees understand company policies and o
 - Ask before making major changes.
 
 ## Project Status
-Currently in development.
+Curre## AI Assistant Rules
+
+- Follow the project instructions.
+- Keep explanations beginner-friendly.
+- Avoid unnecessary dependencies.
+- Test changes before suggesting completion.
+- Never expose private credentials.ntly in development.
