@@ -18,3 +18,14 @@ An AI-powered assistant designed to simplify employee onboarding.
 
 ## Project Status
 In Progress
+## Key Features
+
+- Employee onboarding support
+- AI-powered question answering
+- HR escalation for sensitive queries
+- Company policy information
+
+## Safety
+
+The assistant does not replace HR.
+Sensitive or unclear questions must be referred to HR.
