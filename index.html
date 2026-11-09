@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Settings · Employee Onboarding Assistant</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="page-header">
+      <p class="eyebrow">Employee Onboarding Assistant</p>
+      <h1>Employee settings</h1>
+      <p class="lede">
+        Tell the assistant who you are and how you want updates.
+        These details stay in this browser until the assistant is connected to company records.
+      </p>
+    </header>
+
+    <form id="settings-form" class="card" novalidate>
+      <section class="section" aria-labelledby="profile-heading">
+        <h2 id="profile-heading">Profile</h2>
+
+        <div class="field">
+          <label for="preferred-name">Preferred name</label>
+          <input id="preferred-name" name="preferredName" type="text" autocomplete="nickname" required maxlength="80">
+          <p class="error" id="preferred-name-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="full-name">Full name</label>
+          <input id="full-name" name="fullName" type="text" autocomplete="name" required maxlength="120">
+          <p class="error" id="full-name-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="work-email">Work email</label>
+          <input id="work-email" name="workEmail" type="email" autocomplete="email" required maxlength="160" inputmode="email">
+          <p class="error" id="work-email-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone <span class="optional">(optional)</span></label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="30">
+          <p class="error" id="phone-error" hidden></p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="work-heading">
+        <h2 id="work-heading">Work</h2>
+
+        <div class="field">
+          <label for="job-title">Job title</label>
+          <input id="job-title" name="jobTitle" type="text" autocomplete="organization-title" required maxlength="120">
+          <p class="error" id="job-title-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="department">Department</label>
+          <select id="department" name="department" required>
+            <option value="">Select a department</option>
+            <option value="engineering">Engineering</option>
+            <option value="product">Product</option>
+            <option value="design">Design</option>
+            <option value="people">People</option>
+            <option value="finance">Finance</option>
+            <option value="operations">Operations</option>
+            <option value="sales">Sales</option>
+            <option value="other">Other</option>
+          </select>
+          <p class="error" id="department-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="start-date">Start date</label>
+          <input id="start-date" name="startDate" type="date" required>
+          <p class="error" id="start-date-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="manager-email">Manager email <span class="optional">(optional)</span></label>
+          <input id="manager-email" name="managerEmail" type="email" autocomplete="off" maxlength="160" inputmode="email">
+          <p class="hint">Used only if a question needs to be passed to your manager.</p>
+          <p class="error" id="manager-email-error" hidden></p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="preferences-heading">
+        <h2 id="preferences-heading">Preferences</h2>
+
+        <div class="field">
+          <label for="timezone">Time zone</label>
+          <select id="timezone" name="timezone" required>
+            <option value="">Select a time zone</option>
+          </select>
+          <p class="error" id="timezone-error" hidden></p>
+        </div>
+
+        <fieldset class="checks">
+          <legend>Onboarding updates</legend>
+          <label class="check">
+            <input id="email-reminders" name="emailReminders" type="checkbox">
+            Email me when an onboarding task is due
+          </label>
+          <label class="check">
+            <input id="weekly-summary" name="weeklySummary" type="checkbox">
+            Send a weekly summary of remaining tasks
+          </label>
+        </fieldset>
+      </section>
+
+      <div class="actions">
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+        <div class="buttons">
+          <button type="button" id="reset-button" class="button secondary">Reset</button>
+          <button type="submit" class="button primary">Save settings</button>
+        </div>
+      </div>
+    </form>
+  </main>
+  <script src="settings.js"></script>
+</body>
+</html>
