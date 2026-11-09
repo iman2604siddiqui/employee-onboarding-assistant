@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+
+.page {
+  max-width: 32rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+}
+
+.intro {
+  margin: 0 0 1.5rem;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.65rem 0.7rem;
+  border: 1px solid #000;
+  border-radius: 0;
+  background: #fff;
+  color: #000;
+  font: inherit;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid #000;
+  background: #000;
+  color: #fff;
+  font: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+input:focus,
+select:focus,
+button:focus {
+  outline: 3px solid #000;
+  outline-offset: 2px;
+}
+
+[aria-invalid="true"] {
+  border-width: 2px;
+}
+
+.error {
+  min-height: 1.25rem;
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.confirmation:not(:empty) {
+  margin-top: 1.25rem;
+  padding: 0.75rem;
+  border: 2px solid #000;
+}
+
+@media (min-width: 40rem) {
+  .page {
+    padding-top: 3rem;
+  }
+
+  button {
+    width: auto;
+  }
+}
